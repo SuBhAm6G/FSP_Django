@@ -9,3 +9,6 @@ def contact_fun(request):
 
 def about_fun(request):
     return render(request, "about.html")
+
+def base_fun(request):
+    return render(request, "base.html")
