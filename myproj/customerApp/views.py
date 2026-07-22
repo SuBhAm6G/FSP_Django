@@ -24,3 +24,7 @@ def add_customer(request):
     else:
         form = CustomerForm()
     return render(request, "add_customer.html", {'form': form})
+
+def display_customer(request):
+    customers=Customer.objects.all()
+    return render(request,"display_customer.html", {"cust":customers})

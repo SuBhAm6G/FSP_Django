@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Customer Details</title>
+</head>
+<body>
+    <h1>Customer Details</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Roll</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for s in cust %}
+            <tr>
+                <td>{{ s.roll }}</td>
+                <td>{{ s.name }}</td>
+                <td>{{ s.email }}</td>
+                <td>{{ s.mobile }}</td>
+                <td>
+                    {% if s.image %}
+                    <img src="{{ s.image.url }}" alt="Customer Image" width="100">
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
