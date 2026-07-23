@@ -1,0 +1,13 @@
+Redesign this Django prediction page as a modern, responsive prediction-tool website. Keep the existing backend logic, form field names, Django template tags, form action, {% csrf_token %}, and prediction-result variable fully functional.
+
+Use a clean non-gradient 3D/neubrutalist visual style: solid off-white background, deep dark outlines, sharp corners, layered hard shadows, and 2–3 solid accent colors. Avoid gradients, external images, UI libraries, JavaScript, and unnecessary dependencies.
+
+Build a polished layout with:
+
+- A left-side hero area with a bold prediction-focused headline, short explanatory text, and a CSS-only thematic 3D illustration relevant to the project domain.
+- A right-side raised form card containing all existing input fields, clear labels, units where relevant, validation attributes, and a strong call-to-action button.
+- A visually prominent result panel that appears only when the Django prediction variable is available.
+- Responsive styling that converts to a single-column mobile layout.
+- Accessible HTML: proper labels, logical headings, focus states, readable contrast, and semantic form controls.
+
+Put all styling directly inside the existing template file. Preserve functionality first; improve only the presentation and usability.

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>House Price Prediction</title>
+    </head>
+    <body>
+        <h1>House Price Prediction</h1>
+        <form action="{% url 'prediction' %}" method="post">
+            {% csrf_token %} 
+            <input type = "number" name = "area" placeholder="Area (sq. ft)">
+            <br>
+            <input type = "number" name = "bedrooms" placeholder="No. of Bedrooms">
+            <br>
+            <input type = "number" name = "bathrooms" placeholder="No. of Bathrooms">
+            <br>
+            <input type = "number" name = "age" placeholder="Age of the House">
+            <br>
+            <button type="submit">Predict Price</button>
+        </form>
+        <hr>
+        {% if pred %}
+            <h2>Predicted Price: ₹ {{ pred }}</h2>
+        {% endif %}
+    </body>
+    </body>
+</html>
