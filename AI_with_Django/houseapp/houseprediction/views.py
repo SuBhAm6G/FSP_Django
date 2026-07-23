@@ -1,9 +1,11 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 import joblib
 
 model = joblib.load('D:\\CSBS_SubhamDhar_13031124055\\AI_with_Django\\house_model.pkl')
 
 # Create your views here.
+@login_required(login_url='/admin/login/')
 def predict_fun(request):
     if request.method == 'POST':
         area = float(request.POST.get('area'))
